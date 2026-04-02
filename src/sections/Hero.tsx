@@ -70,7 +70,7 @@ export const Hero = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -83,7 +83,7 @@ export const Hero = () => {
               <Button size="lg" variant="outline" className="border-[#5A3E2B] text-[#5A3E2B] hover:bg-[#5A3E2B] hover:text-white text-lg px-8">
                 Learn More
               </Button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           <motion.div
@@ -103,13 +103,13 @@ export const Hero = () => {
               }}
               className="relative z-10"
             >
-              <div className="bg-gradient-to-br from-[#F5C542] to-[#E0B438] rounded-3xl p-8 shadow-2xl">
-                <div className="aspect-square bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-48 h-48 mx-auto bg-[#5A3E2B]/10 rounded-full flex items-center justify-center">
-                      <span className="text-6xl">🥜</span>
-                    </div>
-                  </div>
+              <div className="bg-gradient-to-br from-[#F5C542] to-[#E0B438] rounded-[2rem] p-3 shadow-2xl">
+                <div className="aspect-square overflow-hidden rounded-[1.5rem] bg-white">
+                  <img 
+                    src="/hero-image.jpeg" 
+                    alt="Averra Pure Groundnut Oil" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>

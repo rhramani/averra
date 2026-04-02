@@ -5,7 +5,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-[#5A3E2B] text-white">
+    <footer id="footer" className="bg-[#5A3E2B] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <motion.div
@@ -53,7 +53,7 @@ export const Footer = () => {
           >
             <h4 className="text-xl font-bold text-[#F5C542]">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'Products', 'About', 'Benefits', 'Contact'].map((link) => (
+              {['Home', 'Products', 'About', 'Benefits', 'FAQ', 'Contact'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
@@ -100,16 +100,22 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#F5C542] flex-shrink-0 mt-1" />
                 <span className="text-white/80">
-                  123 Oil Mill Road, Mumbai, Maharashtra 400001
+                  123, Green Valley Industrial Area, Ring Road, Surat, Gujarat, India – 395007
+                  {/* <br />
+                  <span className="text-xs text-[#F5C542]">(Free Delivery within Gujarat)</span> */}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#F5C542] flex-shrink-0" />
-                <span className="text-white/80">1800-123-4567</span>
+                <div className="text-white/80 space-x-2">
+                  <span>+91 90000 00000</span>
+                  <span className="text-white/40">|</span>
+                  <span>+91 91111 11111</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#F5C542] flex-shrink-0" />
-                <span className="text-white/80">info@averra.com</span>
+                <span className="text-white/80">sales@averra.com</span>
               </li>
             </ul>
           </motion.div>
@@ -118,7 +124,7 @@ export const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/60 text-sm">
             <p>© {currentYear} Averra. All rights reserved.</p>
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               <a href="#" className="hover:text-[#F5C542] transition-colors">
                 Privacy Policy
               </a>
@@ -128,7 +134,7 @@ export const Footer = () => {
               <a href="#" className="hover:text-[#F5C542] transition-colors">
                 Refund Policy
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

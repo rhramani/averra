@@ -49,13 +49,13 @@ export const CTABanner = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center items-center">
-            <Button
+            {/* <Button
               size="lg"
               className="bg-[#5A3E2B] hover:bg-[#5A3E2B]/90 text-white font-semibold text-lg px-8 py-6"
             >
               Order Now
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </Button> */}
             <Button
               size="lg"
               variant="outline"

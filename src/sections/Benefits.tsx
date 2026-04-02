@@ -3,24 +3,24 @@ import { Heart, Shield, Sparkles, Leaf } from 'lucide-react';
 
 const benefits = [
   {
-    icon: Heart,
-    title: 'Heart Healthy',
-    description: 'Rich in monounsaturated fats that support cardiovascular health',
-  },
-  {
-    icon: Shield,
-    title: 'Boosts Immunity',
-    description: 'Contains antioxidants and vitamin E to strengthen your immune system',
-  },
-  {
     icon: Sparkles,
-    title: 'Rich Taste',
-    description: 'Authentic nutty flavor that enhances every dish',
+    title: 'G20 Premium Peanuts',
+    description: 'Exclusively using the premium G20 variety harvested once a year in November for peak flavor.',
   },
   {
     icon: Leaf,
-    title: 'Traditional Process',
-    description: 'Time-tested ghani method preserves natural goodness',
+    title: 'Traditional Ghani',
+    description: 'Mechanically pressed extraction at low temperatures to preserve all natural nutrients and aroma.',
+  },
+  {
+    icon: Shield,
+    title: 'Natural Filtration',
+    description: '100% unrefined oil, naturally filtered through multiple layers of cotton cloth without chemicals.',
+  },
+  {
+    icon: Heart,
+    title: 'Original Goodness',
+    description: 'Zero chemicals, zero preservatives, and cholesterol-free for your heart-healthy lifestyle.',
   },
 ];
 
@@ -36,21 +36,13 @@ export const Benefits = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-br from-[#F5C542] to-[#E0B438] flex items-center justify-center">
-                <motion.div
-                  animate={{
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: 'linear',
-                  }}
-                  className="text-9xl"
-                >
-                  🥜
-                </motion.div>
+            <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-[#F5C542]/20">
+              <div className="w-full h-full bg-white flex items-center justify-center relative">
+                <img 
+                  src="/benefits-1.webp" 
+                  alt="Premium G20 Peanuts" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
@@ -63,9 +55,15 @@ export const Benefits = () => {
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              className="absolute -bottom-8 -right-8 w-48 h-48 bg-white rounded-3xl shadow-xl flex items-center justify-center"
+              className="absolute -bottom-8 -right-8 w-56 h-56 bg-white rounded-3xl shadow-2xl flex items-center justify-center p-2 border-4 border-[#F5C542]/10"
             >
-              <span className="text-7xl">🌿</span>
+              <div className="w-full h-full rounded-2xl overflow-hidden">
+                <img 
+                  src="/benefits-2.webp" 
+                  alt="Cold Pressed Oil" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </motion.div>
           </motion.div>
 

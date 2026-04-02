@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ShoppingBag, Menu, X } from 'lucide-react';
+import { ShoppingBag, Menu, X, MessageSquare } from 'lucide-react';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,7 +15,7 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'Products', 'About', 'Benefits', 'Contact'];
+  const navLinks = ['Home', 'Products', 'About', 'Benefits', 'FAQ'];
 
   return (
     <motion.nav
@@ -59,9 +59,12 @@ export const Navbar = () => {
             transition={{ delay: 0.3 }}
             className="hidden md:block"
           >
-            <Button className="bg-[#F5C542] hover:bg-[#E0B438] text-[#5A3E2B] font-semibold">
-              <ShoppingBag className="mr-2 h-4 w-4" />
-              Shop Now
+            <Button 
+              className="bg-[#F5C542] hover:bg-[#E0B438] text-[#5A3E2B] font-semibold"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Contact Us
             </Button>
           </motion.div>
 
@@ -90,9 +93,15 @@ export const Navbar = () => {
                 {link}
               </a>
             ))}
-            <Button className="bg-[#F5C542] hover:bg-[#E0B438] text-[#5A3E2B] font-semibold w-full mt-4">
-              <ShoppingBag className="mr-2 h-4 w-4" />
-              Shop Now
+            <Button 
+              className="bg-[#F5C542] hover:bg-[#E0B438] text-[#5A3E2B] font-semibold w-full mt-4"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Contact Us
             </Button>
           </motion.div>
         )}

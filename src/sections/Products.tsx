@@ -1,30 +1,31 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ShoppingCart } from 'lucide-react';
 
 const products = [
   {
-    title: 'Premium Tin',
-    size: '15 Liters',
-    price: '₹2,499',
+    title: 'AVERRA PREMIUM TIN',
+    size: '15 Liters (13.65kg)',
+    price: '₹3,290',
     popular: true,
     emoji: '🪔',
+    image: '/product-1.webp'
   },
   {
-    title: 'Family Pack',
-    size: '5 Liters',
-    price: '₹899',
+    title: 'AVERRA ECONOMY CAN',
+    size: '5 Liters (4.55kg)',
+    price: '₹1,280',
     popular: false,
     emoji: '🏺',
+    image: '/product-2.webp'
   },
   {
-    title: 'Starter Pack',
-    size: '1 Liter',
-    price: '₹199',
+    title: 'AVERRA STARTER PACK',
+    size: '1 Liter (910g)',
+    price: '₹290',
     popular: false,
     emoji: '🧴',
+    image: '/product-3.webp'
   },
 ];
 
@@ -57,40 +58,47 @@ export const Products = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <Card className="border-2 border-[#F5C542]/20 hover:border-[#F5C542] transition-all duration-300 h-full overflow-hidden group hover:shadow-2xl">
+              <Card className="relative bg-[#FDF5E6] border-[#D2B48C] hover:border-[#F5C542] transition-all duration-300 h-full overflow-hidden group hover:shadow-2xl flex flex-col pt-8">
                 {product.popular && (
-                  <div className="bg-[#F5C542] text-[#5A3E2B] text-center py-2 font-semibold text-sm">
+                  <div className="absolute top-0 left-0 w-full bg-[#F5C542] text-[#5A3E2B] text-center py-2 font-bold text-sm uppercase tracking-wider z-20">
                     Most Popular
                   </div>
                 )}
-                <CardContent className="p-8 text-center space-y-6">
+                <CardContent className="p-8 text-center flex flex-col flex-grow">
                   <motion.div
-                    whileHover={{ scale: 1.1, rotate: 10 }}
-                    className="w-32 h-32 mx-auto bg-gradient-to-br from-[#F5C542] to-[#E0B438] rounded-3xl flex items-center justify-center shadow-lg"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="w-full h-[270px] mx-auto bg-transparent flex items-center justify-center overflow-hidden mb-8"
                   >
-                    <span className="text-6xl">{product.emoji}</span>
+                    {product.image ? (
+                      <img 
+                        src={product.image} 
+                        alt={product.title} 
+                        className="h-full object-contain" 
+                      />
+                    ) : (
+                      <span className="text-8xl">{product.emoji}</span>
+                    )}
                   </motion.div>
 
-                  <div>
-                    <h3 className="text-2xl font-bold text-[#5A3E2B] mb-2">
+                  <div className="mb-6 min-h-[4rem] flex flex-col justify-center">
+                    <h3 className="text-xl font-black text-[#5A3E2B] uppercase tracking-tight leading-tight">
                       {product.title}
                     </h3>
-                    <Badge variant="outline" className="border-[#5A3E2B] text-[#5A3E2B]">
-                      {product.size}
-                    </Badge>
+                    <div className="text-xs font-bold text-[#5A3E2B]/70 uppercase mt-2">
+                      Size: {product.size}
+                    </div>
                   </div>
 
-                  <div className="text-4xl font-bold text-[#F5C542]">
-                    {product.price}
+                  <div className="mt-auto space-y-1">
+                    <div className="text-4xl font-black text-[#008000] decoration-2 underline underline-offset-8">
+                      {product.price}
+                    </div>
+                    <div className="text-[10px] font-bold text-[#5A3E2B]/60 uppercase pt-4 tracking-widest">
+                      INCLUSIVE OF ALL TAX
+                    </div>
                   </div>
                 </CardContent>
 
-                <CardFooter className="p-6 pt-0">
-                  <Button className="w-full bg-[#5A3E2B] hover:bg-[#5A3E2B]/90 text-white font-semibold group-hover:bg-[#F5C542] group-hover:text-[#5A3E2B] transition-colors">
-                    <ShoppingCart className="mr-2 h-4 w-4" />
-                    Buy Now
-                  </Button>
-                </CardFooter>
               </Card>
             </motion.div>
           ))}

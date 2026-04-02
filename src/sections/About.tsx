@@ -24,21 +24,20 @@ export const About = () => {
           </h2>
           <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed text-white/90">
             <p>
-              At Averra, we believe in preserving the ancient art of oil extraction.
-              Our journey began with a simple mission: to bring back the authentic taste
-              and health benefits of traditional ghani-pressed groundnut oil.
+              The Averra journey began with a simple observation: modern kitchens were missing the 
+              true, authentic flavor of tradition. Inspired by the "Original Goodness" of childhood meals, 
+              we set out on a mission to bring back the purity of oil, just as nature intended.
             </p>
             <p>
-              We follow the time-honored ghani method, where groundnuts are slowly
-              crushed using wooden churners. This cold-press process ensures that the
-              oil retains all its natural nutrients, flavor, and aroma without any
-              chemical intervention.
+              Founded with the philosophy of "Returning to Original Goodness," we focus on three 
+              core values: <strong>Purity, Naturality, and Originality</strong>. We believe that 
+              healthy living starts with what goes into your pan, and our goal is to ensure 
+              every Indian household has access to 100% pure Ghani oil.
             </p>
             <p>
-              Every drop of Averra oil tells a story of purity, tradition, and
-              unwavering commitment to quality. We source only the finest groundnuts
-              from trusted farmers and process them with care to deliver nature's best
-              to your kitchen.
+              Every drop of Averra oil is a testament to our roots in Gujarat, where we source 
+              exclusive G20 variety groundnuts. We don't just produce oil; we preserve a 
+              legacy of health and taste that has been passed down through generations.
             </p>
           </div>
         </motion.div>
