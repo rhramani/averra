@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 28 35% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 28 35% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 35% 25%;
+    --primary: 45 89% 61%;
+    --primary-foreground: 28 35% 25%;
+    --secondary: 45 100% 95%;
+    --secondary-foreground: 28 35% 25%;
+    --muted: 45 100% 95%;
+    --muted-foreground: 28 20% 45%;
+    --accent: 45 89% 61%;
+    --accent-foreground: 28 35% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 30% 85%;
+    --input: 45 30% 85%;
+    --ring: 45 89% 61%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
